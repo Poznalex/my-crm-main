@@ -8,6 +8,6 @@
 .main-header {
     display: flex;
     height: 122px;
-    background: #FFFFFF;
+    background: #ffffff;
 }
 </style>
