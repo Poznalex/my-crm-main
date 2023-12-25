@@ -1,7 +1,6 @@
 <script setup></script>
 <template>
-    <div class="main-header">
-    </div>
+    <div class="main-header"></div>
 </template>
 
 <style scoped>
