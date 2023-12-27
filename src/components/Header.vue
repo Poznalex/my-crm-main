@@ -90,7 +90,11 @@
     width: 140px;
     height: 42px;
    }
- }
+  }
+  .header__plus {
+  padding: 0;
+  border: 0;
+  }
 
   @media screen and (min-width: 768px) {
     .header__plus {
