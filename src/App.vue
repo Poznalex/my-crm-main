@@ -6,5 +6,4 @@ import Header from "/src/components/Header.vue"
     <Header />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

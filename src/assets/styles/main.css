@@ -1,5 +1,6 @@
 @import './color.css';
+@import './fonts.css';
 
 body {
-  background: var(--main-color-transp-blue);
+   background: var(--main-color-transp-blue);
 }
