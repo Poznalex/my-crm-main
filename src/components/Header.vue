@@ -20,7 +20,7 @@
     padding-right: 150px;
     padding-left: 150px;
     height: 122px;
-    background: #ffffff;
+    background: var(--main-color-white);
     align-items: center;
   }
 
@@ -54,18 +54,18 @@
    }
   
   .btn-column:hover {
-    color: #90BBFE;
-    border-color: #90BBFE;
+    color: var(--main-color-hover-blue);
+    border-color: var(--main-color-hover-blue);
   }
 
   .btn-column:active {
     background: var(--main-color-light-blue);
-    color: #ffffff;
+    color: var(--main-color-white);
   }
 
   .btn-task {
     background: var(--main-color-pink);
-    color: #ffffff;
+    color: var(--main-color-white);
   }
 
   .btn-task:hover {
