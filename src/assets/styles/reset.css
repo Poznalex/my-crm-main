@@ -132,6 +132,7 @@ table {
 button {
     font-family: inherit;
     background-color: inherit;
+    border: none;
 }
 
 img {

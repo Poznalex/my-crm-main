@@ -19,7 +19,7 @@
     background: var(--main-color-white);
     align-items: center;
     height: 62px;
-    padding:  0 10px;
+    padding: 0 10px;
 }
 
 .header__logo { 
@@ -39,7 +39,6 @@
     height: 48px;
     justify-content: center;
     align-items: center;
-    border: none;
     border-radius: 10px;
     font-family: 'Montserrat';
     font-size: 20px;
@@ -51,12 +50,12 @@
     border: 1px solid var(--main-color-blue);
     margin: 0 32px;
     color: var(--main-color-blue);
-  }
+}
 
 .btn-column:hover {
     color: var(--main-color-light-blue);
     border-color: var(--main-color-light-blue);
-    }
+}
 
 .btn-column:active {
     background: var(--main-color-light-blue);
