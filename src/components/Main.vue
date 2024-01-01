@@ -37,6 +37,7 @@ import Column from "/src/components/Column.vue";
 }
 
 .create-column__icon {
+
     display: flex;
     justify-content: center;
     width: 14px;
