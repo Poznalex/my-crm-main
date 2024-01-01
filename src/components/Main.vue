@@ -68,4 +68,3 @@ import Column from "/src/components/Column.vue";
         padding: 93px 150px 0;
     }
 }
-</style>
