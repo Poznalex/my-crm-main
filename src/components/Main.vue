@@ -100,7 +100,7 @@
 
 .btn__create__column__wrapper {
     display: flex;
-    margin-left: 87px;
+    justify-content: center;
 }
 
 .btn__create__column {
