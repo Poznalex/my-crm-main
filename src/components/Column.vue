@@ -14,9 +14,9 @@
     <div class='column'>
         <div class='column__header'>
             <div class='column__header-title'>{{ title }}</div>
-            <div class='column__header-arrow'>
-                <img alt='arrow' src='/src/assets/images/main/header-arrow.svg'>
-            </div>
+            <!-- <div class='column__header-arrow'> -->
+                <img alt='arrow' src='/src/assets/images/main/column-arrow.svg'>
+            <!-- </div> -->
         </div>
         <div class='column__tasks'></div>
     </div>
@@ -50,16 +50,8 @@
     flex-shrink: 0;
 }
 
-.column__header-arrow {
-    width: 24px;
-    height: 24px;
-    margin: 10px 14px 10px;
-}
-
-.arrow__wrapper img {
-    width: 12px;
-    height: 6px;
-    margin-right: 10px;
+ img {
+    margin-right: 14px;
 }
 
 .column__tasks {
