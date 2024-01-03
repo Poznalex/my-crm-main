@@ -46,6 +46,7 @@ export default {
                 alt="arrow"
                 src="/src/assets/images/main/column-arrow.svg"
             />
+
         </div>
         <div class="column__tasks">
             <task-card nameProject="X" />
