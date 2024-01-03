@@ -52,6 +52,7 @@ export default {
             <task-Card />
             <task-Card />
         </div>
+
     </div>
 </template>
 
