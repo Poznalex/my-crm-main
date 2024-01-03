@@ -3,12 +3,12 @@
 <template>
     <div class="header">
         <div class="header__logo">
-            <img alt="logo" src="/src/assets/images/logo-header.svg">
+            <img alt="logo" src="/src/assets/images/header/logo-header.svg">
         </div>
         <button class="header__button btn-column">Create column</button>
         <button class="header__button btn-task">Create task</button>
         <div class="header__plus">
-            <img alt="logo" src="/src/assets/images/icon-plus.svg">
+            <img alt="logo" src="/src/assets/images/header/icon-plus.svg">
         </div>
     </div>
 </template>
