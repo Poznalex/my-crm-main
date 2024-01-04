@@ -14,9 +14,7 @@
     <div class='column'>
         <div class='column__header'>
             <div class='column__header-title'>{{ title }}</div>
-            <!-- <div class='column__header-arrow'> -->
-                <img alt='arrow' src='/src/assets/images/main/column-arrow.svg'>
-            <!-- </div> -->
+            <img alt='arrow' src='/src/assets/images/main/column-arrow.svg'>
         </div>
         <div class='column__tasks'></div>
     </div>
