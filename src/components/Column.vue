@@ -145,6 +145,7 @@ export default {
 
 @media screen and (min-width: 768px) {
     .column__header {
+        align-items: start;
         width: 526px;
         height: 118px;
         float: left;
@@ -152,6 +153,23 @@ export default {
         margin-bottom: 0;
         overflow: auto;
     }
+
+    .column__header-title {
+        font-size: 20px;
+        margin: 10px 24px;
+    }
+
+    /* .column__tasks {
+        position: absolute;
+        top: 275px;
+        display: flex;
+        width: 526px;
+        padding: 0;
+        background-color: var(--main-color-white);
+        min-height: 252px;
+        margin: 0 10px;
+        border-radius: 10px;
+    } */
 
     .column--open .column__tasks {
         display: none;
