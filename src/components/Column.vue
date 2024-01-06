@@ -94,6 +94,9 @@ export default {
 .column--open .column__header img {
     rotate: 180deg;
 }
+ .column--open .column__header img {
+    rotate: 180deg;
+}
 
 .column__tasks {
     display: none;
@@ -130,4 +133,29 @@ export default {
         display: none;
     }
 }
+
+.column--open .column__tasks {
+    display: flex;
+}
+
+
+@media screen and (min-width: 768px) {
+    .column__header {
+        width: 526px;
+        height: 118px;
+        float: left;
+        margin: 0 10px;
+        margin-bottom: 0;
+        overflow: auto;
+    }
+
+    .column--open .column__tasks {
+        display: none;
+    }
+
+    .column--open .column__header img {
+        rotate: 0deg;
+    }
+}
+
 </style>
