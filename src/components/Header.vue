@@ -77,6 +77,7 @@
 
 @media screen and (min-width: 768px) {
    .header {
+        display: flex;
         padding: 0 24px;
         height: 122px;
     }

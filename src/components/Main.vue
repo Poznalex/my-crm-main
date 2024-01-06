@@ -19,8 +19,9 @@
 
 <style>
 .main {
-    display: block;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
     padding: 0 10px;
     margin-top: 24px;
 }
@@ -48,4 +49,32 @@
     margin-left: 4px;
     flex-shrink: 0;
 }
-</style>
+
+
+@media screen and (min-width: 768px) {
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 0 24px;
+    margin-top: 93px;
+    overflow-x: scroll;
+    }
+
+.main__create-column {
+    display: none;
+    } 
+ } 
+ 
+ @media screen and (min-width: 1024px) {
+   .main {
+    padding: 0 60px;
+    } 
+ }
+
+ @media screen and (min-width: 1400px) {
+   .main {
+    padding: 0 150px;
+    }  
+ }
+    </style>
