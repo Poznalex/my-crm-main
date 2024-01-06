@@ -77,6 +77,9 @@ export default {
 .column--open .column__header img {
     rotate: 180deg;
 }
+ .column--open .column__header img {
+    rotate: 180deg;
+}
 
 .column__tasks {
     display: none;
