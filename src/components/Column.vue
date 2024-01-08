@@ -92,17 +92,16 @@
         margin: 10px 24px;
     }
 
-    /* .column__tasks {
-        position: absolute;
-        top: 275px;
+    .column__tasks {
+        top: 236px; */
         display: flex;
         width: 526px;
         padding: 0;
         background-color: var(--main-color-white);
         min-height: 252px;
-        margin: 0 10px;
+        margin: -50px 10px 0;
         border-radius: 10px;
-    } */
+    }
 
     .column--open .column__tasks {
         display: none;

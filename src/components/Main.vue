@@ -64,8 +64,9 @@
 .main__create-column {
     display: none;
     } 
- } 
- 
+}
+
+
  @media screen and (min-width: 1024px) {
    .main {
     padding: 0 60px;
