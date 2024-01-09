@@ -81,7 +81,6 @@
         align-items: start;
         width: 526px;
         height: 118px;
-        float: left;
         margin: 0 10px;
         margin-bottom: 0;
         overflow: auto;
@@ -93,7 +92,6 @@
     }
 
     .column__tasks {
-        top: 236px; */
         display: flex;
         width: 526px;
         padding: 0;
@@ -103,12 +101,12 @@
         border-radius: 10px;
     }
 
-    .column--open .column__tasks {
-        display: none;
+    .column__tasks {
+        display: flex;
     }
 
-    .column--open .column__header img {
-        rotate: 0deg;
+    img {
+        display: none;
     }
 }
 
