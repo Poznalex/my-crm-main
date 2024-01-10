@@ -13,13 +13,20 @@
             open: false
         };
     },
+    methods: {
+    showTasks() {
+      const isMobile = window.innerWidth < 768;
+      if (isMobile) this.open = !this.open;
+    }
+  }
+    
 }
   
 </script>
 
 <template>
     <div class='column' :class="{ 'column--open': open }">
-        <div class='column__header'  @click="open = !open">
+        <div class='column__header'  @click="showTasks">
             <div class='column__header-title'>{{ title }}</div>
             <img alt='arrow' src='/src/assets/images/main/column-arrow.svg'>
         </div>
