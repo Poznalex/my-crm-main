@@ -1,6 +1,13 @@
 <script>
-export default {
-    name: "column",
+ import taskcard from '/src/components/TaskCard.vue'
+ 
+ export default {
+    name: 'column',
+
+    components: {
+        taskcard
+    },
+
     props: {
         title: {
             type: String,
@@ -40,7 +47,9 @@ export default {
                 src="/src/assets/images/main/column-arrow.svg"
             />
         </div>
-        <div class="column__tasks"></div>
+        <div class='column__tasks'>
+            <taskcard />
+        </div>
     </div>
 </template>
 
@@ -75,6 +84,7 @@ export default {
 }
 
 .column--open .column__header img {
+  
     rotate: 180deg;
 }
 
@@ -88,6 +98,7 @@ export default {
     min-height: 44px;
     margin-bottom: 12px;
     border-radius: 10px;
+    flex-shrink: 0;
 }
 
 .column--open .column__tasks {
