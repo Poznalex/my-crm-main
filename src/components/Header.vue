@@ -3,7 +3,7 @@
 <template>
     <div class="header">
         <div class="header__logo">
-            <img alt="logo" src="/src/assets/images/header/logo-header.svg">
+            <img class="header__logo__img" alt="logo" src="/src/assets/images/header/logo-header.svg">
         </div>
         <button class="header__button btn-column">Create column</button>
         <button class="header__button btn-task">Create task</button>
@@ -28,7 +28,7 @@
     height: 42px;
 }
 
-.header__logo img {
+.header__logo__img {
     width: 100%;
     height: 100%;
 }
