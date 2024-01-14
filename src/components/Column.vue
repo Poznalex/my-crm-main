@@ -28,7 +28,7 @@
     <div class='column' :class="{ 'column--open': isOpened }">
         <div class='column__header'  @click="showTasks">
             <div class='column__header-title'>{{ title }}</div>
-            <img alt='arrow' src='/src/assets/images/main/column-arrow.svg'>
+            <img class='column__arrow' alt='arrow' src='/src/assets/images/main/column-arrow.svg'>
         </div>
         <div class='column__tasks'></div>
     </div>
@@ -62,7 +62,7 @@
     flex-shrink: 0;
 }
 
-  img {
+ .column__arrow {
     margin-right: 14px;
 }
  .column--open .column__header img {
@@ -112,7 +112,7 @@
         display: flex;
     }
 
-    img {
+    .column__arrow {
         display: none;
     }
 }
