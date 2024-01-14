@@ -168,7 +168,7 @@ export default {
         display: flex;
     }
 
-    img {
+    .column__arrow {
         display: none;
     }
 }
