@@ -10,13 +10,13 @@
 
     data () {
         return {
-            open: false
+            isOpened: false
         };
     },
     methods: {
     showTasks() {
       const isMobile = window.innerWidth < 768;
-      if (isMobile) this.open = !this.open;
+      if (isMobile) this.isOpened = !this.isOpened;
     }
   }
     
@@ -25,7 +25,7 @@
 </script>
 
 <template>
-    <div class='column' :class="{ 'column--open': open }">
+    <div class='column' :class="{ 'column--open': isOpened }">
         <div class='column__header'  @click="showTasks">
             <div class='column__header-title'>{{ title }}</div>
             <img alt='arrow' src='/src/assets/images/main/column-arrow.svg'>
