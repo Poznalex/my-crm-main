@@ -4,9 +4,9 @@
 
 <template>
     <div class='main'>
-        <column title="to do -18" />
-        <column title="in progress - 3" />
-        <column title="done - 456" />
+        <column title="to do -" amountTasks="18" />
+        <column title="in progress -" amountTasks="3" />
+        <column title="done -" amountTasks="456" />
         
         <div class='main__create-column'>
             <div class='create-column__text'>Create column</div>

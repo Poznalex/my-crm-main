@@ -5,7 +5,12 @@
         title: {
             type: String,
             default: ''
-        }
+        },
+
+        amountTasks: {
+            type: Number,
+            default: ''
+        },
     },
 
     data () {
@@ -13,11 +18,12 @@
             isOpened: false
         };
     },
+
     methods: {
-    showTasks() {
-      const isMobile = window.innerWidth < 768;
-      if (isMobile) this.isOpened = !this.isOpened;
-    }
+        showTasks() {
+            const isMobile = window.innerWidth < 768;
+            if (isMobile) this.isOpened = !this.isOpened;
+        }
   }
     
 }
@@ -25,12 +31,12 @@
 </script>
 
 <template>
-    <div class='column' :class="{ 'column--open': isOpened }">
-        <div class='column__header'  @click="showTasks">
-            <div class='column__header-title'>{{ title }}</div>
-            <img class='column__arrow' alt='arrow' src='/src/assets/images/main/column-arrow.svg'>
+    <div class="column" :class="{ 'column--open': isOpened }">
+        <div class="column__header"  @click="showTasks">
+            <div class="column__header-title">{{ title }} {{ amountTasks }}</div>
+            <img class="column__arrow" alt="arrow" src="/src/assets/images/main/column-arrow.svg">
         </div>
-        <div class='column__tasks'></div>
+        <div class="column__tasks"></div>
     </div>
 </template>
 
