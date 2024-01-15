@@ -40,7 +40,6 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    font-family: 'Montserrat';
     font-size: 20px;
     font-weight: 500;
     padding: 12px 18px;

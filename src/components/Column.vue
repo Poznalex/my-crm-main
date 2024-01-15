@@ -61,7 +61,6 @@
     justify-content: center;
     align-items: center;
     color: var(--main-color-white);
-    font-family: 'Montserrat';
     font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;

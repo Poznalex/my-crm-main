@@ -11,7 +11,7 @@
         <div class='main__create-column'>
             <div class='create-column__text'>Create column</div>
             <div class='create-column__sign'>
-                <img alt='plus' src='/src/assets/images/main/create-plus.svg'>
+                <img  class="create__column__plus" alt='plus' src='/src/assets/images/main/create-plus.svg'>
             </div>
         </div>
     </div> 
