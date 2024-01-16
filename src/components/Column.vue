@@ -1,0 +1,126 @@
+<script>
+export default {
+    name: "column",
+    props: {
+        title: {
+            type: String,
+            default: "",
+        },
+
+        amountTasks: {
+            type: Number,
+            default: "",
+        },
+    },
+
+    data() {
+        return {
+            isOpened: false,
+        };
+    },
+
+    methods: {
+        showTasks() {
+            const isMobile = window.innerWidth < 768;
+            if (isMobile) this.isOpened = !this.isOpened;
+        },
+    },
+};
+</script>
+
+<template>
+    <div class="column" :class="{ 'column--open': isOpened }">
+        <div class="column__header" @click="showTasks">
+            <div class="column__header-title">
+                {{ title }} - {{ amountTasks }}
+            </div>
+            <img
+                class="column__arrow"
+                alt="arrow"
+                src="/src/assets/images/main/column-arrow.svg"
+            />
+        </div>
+        <div class="column__tasks"></div>
+    </div>
+</template>
+
+<style>
+.column__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    background: var(--main-color-light-blue);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px 14px 10px 10px;
+}
+
+.column__header-title {
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color-white);
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.column__arrow {
+    margin-left: 14px;
+}
+
+.column--open .column__header img {
+    rotate: 180deg;
+}
+
+.column__tasks {
+    display: none;
+    background-color: var(--main-color-white);
+    min-height: 44px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+}
+
+.column--open .column__tasks {
+    display: flex;
+}
+
+@media screen and (min-width: 768px) {
+    .column {
+        margin-right: 20px;
+        width: 526px;
+        flex-shrink: 0;
+    }
+
+    .column__header {
+        align-items: start;
+        height: 118px;
+        padding: 10px 24px;
+    }
+
+    .column__header-title {
+        font-size: 20px;
+    }
+
+    .column__tasks {
+        display: flex;
+        background-color: var(--main-color-white);
+        min-height: 252px;
+        margin-top: -50px;
+        border-radius: 10px;
+    }
+
+    .column__tasks {
+        display: flex;
+    }
+
+    .column__arrow {
+        display: none;
+    }
+}
+</style>
