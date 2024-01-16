@@ -85,6 +85,7 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -103,7 +104,8 @@ section {
 }
 
 body {
-    line-height: 1;
+    line-height: normal;
+    font-family: 'Montserrat';
 }
 
 ol,
@@ -133,8 +135,4 @@ button {
     font-family: inherit;
     background-color: inherit;
     border: none;
-}
-
-img {
-    margin: inherit;
 }
