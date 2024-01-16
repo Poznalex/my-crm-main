@@ -46,7 +46,6 @@ export default {
                 alt="arrow"
                 src="/src/assets/images/main/column-arrow.svg"
             />
-
         </div>
         <div class="column__tasks">
             <task-card nameProject="X" />
@@ -94,7 +93,8 @@ export default {
 .column--open .column__header img {
     rotate: 180deg;
 }
- .column--open .column__header img {
+
+.column--open .column__header img {
     rotate: 180deg;
 }
 
@@ -142,29 +142,28 @@ export default {
     display: flex;
 }
 
-
 @media screen and (min-width: 768px) {
+    .column {
+        margin-right: 20px;
+        width: 526px;
+        flex-shrink: 0;
+    }
+
     .column__header {
         align-items: start;
-        width: 526px;
         height: 118px;
-        margin: 0 10px;
-        margin-bottom: 0;
-        overflow: auto;
+        padding: 10px 24px;
     }
 
     .column__header-title {
         font-size: 20px;
-        margin: 10px 24px;
     }
 
     .column__tasks {
         display: flex;
-        width: 526px;
-        padding: 0;
         background-color: var(--main-color-white);
         min-height: 252px;
-        margin: -50px 10px 0;
+        margin-top: -50px;
         border-radius: 10px;
     }
 
@@ -176,5 +175,4 @@ export default {
         display: none;
     }
 }
-
 </style>
