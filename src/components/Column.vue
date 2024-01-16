@@ -77,7 +77,8 @@ export default {
 .column--open .column__header img {
     rotate: 180deg;
 }
- .column--open .column__header img {
+
+.column--open .column__header img {
     rotate: 180deg;
 }
 
