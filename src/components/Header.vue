@@ -3,12 +3,16 @@
 <template>
     <div class="header">
         <div class="header__logo">
-            <img class="header__logo__img" alt="logo" src="/src/assets/images/header/logo-header.svg">
+            <img
+                class="header__logo__img"
+                alt="logo"
+                src="/src/assets/images/header/logo-header.svg"
+            />
         </div>
         <button class="header__button btn-column">Create column</button>
         <button class="header__button btn-task">Create task</button>
         <div class="header__plus">
-            <img alt="logo" src="/src/assets/images/header/icon-plus.svg">
+            <img alt="logo" src="/src/assets/images/header/icon-plus.svg" />
         </div>
     </div>
 </template>
@@ -22,7 +26,7 @@
     padding: 0 10px;
 }
 
-.header__logo { 
+.header__logo {
     margin-right: auto;
     width: 140px;
     height: 42px;
@@ -75,15 +79,14 @@
 }
 
 @media screen and (min-width: 768px) {
-   .header {
-        display: flex;
+    .header {
         padding: 0 24px;
         height: 122px;
     }
-  
+
     .header__logo {
         width: 308px;
-        height: 94px; 
+        height: 94px;
     }
 
     .header__plus {
