@@ -91,7 +91,6 @@ export default {
 }
 
 .column--open .column__header img {
-  
     rotate: 180deg;
 }
 
@@ -140,7 +139,8 @@ export default {
 }
 
 .column--open .column__tasks {
-    display: flex;
+    display: block;
+    width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -161,15 +161,8 @@ export default {
     }
 
     .column__tasks {
-        display: flex;
-        background-color: var(--main-color-white);
-        min-height: 252px;
-        margin-top: -50px;
-        border-radius: 10px;
-    }
-
-    .column__tasks {
-        display: flex;
+        display: block;
+        margin-top: -58px;
     }
 
     .column__arrow {
