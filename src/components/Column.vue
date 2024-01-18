@@ -1,11 +1,11 @@
 <script>
- import taskcard from '/src/components/TaskCard.vue'
- 
- export default {
-    name: 'column',
+import taskcard from "/src/components/TaskCard.vue";
+
+export default {
+    name: "column",
 
     components: {
-        taskcard
+        taskcard,
     },
 
     props: {
@@ -47,13 +47,19 @@
                 src="/src/assets/images/main/column-arrow.svg"
             />
         </div>
-        <div class='column__tasks'>
+        <div class="column__tasks">
+            <taskcard nameProject="X" />
+            <taskcard />
             <taskcard />
         </div>
     </div>
 </template>
 
 <style>
+.column {
+    width: 100%;
+}
+
 .column__header {
     display: flex;
     justify-content: space-between;
@@ -84,7 +90,6 @@
 }
 
 .column--open .column__header img {
-  
     rotate: 180deg;
 }
 
@@ -94,15 +99,11 @@
 
 .column__tasks {
     display: none;
-    background-color: var(--main-color-white);
-    min-height: 44px;
-    margin-bottom: 12px;
-    border-radius: 10px;
-    flex-shrink: 0;
 }
 
 .column--open .column__tasks {
-    display: flex;
+    display: block;
+    width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -123,15 +124,8 @@
     }
 
     .column__tasks {
-        display: flex;
-        background-color: var(--main-color-white);
-        min-height: 252px;
-        margin-top: -50px;
-        border-radius: 10px;
-    }
-
-    .column__tasks {
-        display: flex;
+        display: block;
+        margin-top: -58px;
     }
 
     .column__arrow {
