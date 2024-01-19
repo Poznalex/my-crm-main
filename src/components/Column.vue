@@ -1,5 +1,5 @@
 <script>
-import taskcard from "/src/components/TaskCard.vue";
+import taskcard from "/src/components/TaskCard/TaskCard.vue";
 
 export default {
     name: "column",

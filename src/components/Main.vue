@@ -59,13 +59,13 @@ import Column from "/src/components/Column.vue";
 
 @media screen and (min-width: 1024px) {
     .main {
-        padding: 0 60px;
+        padding: 93px 60px 0;
     }
 }
 
 @media screen and (min-width: 1400px) {
     .main {
-        padding: 0 150px;
+        padding: 93px 150px 0;
     }
 }
 </style>
