@@ -140,7 +140,6 @@ export default {
 
 .column--open .column__tasks {
     display: block;
-    width: 100%;
 }
 
 @media screen and (min-width: 768px) {
