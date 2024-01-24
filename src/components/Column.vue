@@ -1,11 +1,11 @@
 <script>
-import taskcard from "/src/components/TaskCard/TaskCard.vue";
+import taskCard from '/src/components/TaskCard/taskCard.vue';
 
 export default {
     name: "column",
 
     components: {
-        taskcard,
+        taskCard,
     },
 
     props: {
@@ -48,9 +48,9 @@ export default {
             />
         </div>
         <div class="column__tasks">
-            <taskcard nameProject="X" />
-            <taskcard />
-            <taskcard />
+            <task-card nameProject="X" />
+            <task-Card />
+            <task-Card />
         </div>
     </div>
 </template>
@@ -95,11 +95,11 @@ export default {
 
 .column__tasks {
     display: none;
+    margin-bottom: 10px;
 }
 
 .column--open .column__tasks {
     display: block;
-    width: 100%;
 }
 
 @media screen and (min-width: 768px) {
