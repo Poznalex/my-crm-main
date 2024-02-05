@@ -1,58 +1,60 @@
 <script setup>
 
-            let showModal=(ref)false;
-        };
+const props = defineProps({
+    defaultComponent: {
+        type: Object,
+        default: null,
     },
-    methods: {
-        openModal() {
-            this.showModal = true;
-        },
-        closeModal() {
-            this.showModal = false;
-        },
-    },
-};
+});
 </script>
 
-
 <template>
-    <div class="modal" v-if="showModal">
-        <div class="modal-content">
-            <span class="close" @click="closeModal">&times;</span>
-            <p>Это модальное окно!</p>
+    <Transition name="modal">
+        <div class="modal-mask">
+            <div v-if="defaultComponent" class="modal-container">
+                <component :is="defaultComponent" />
+                <button class="modal-default-button" @click="$emit('close')">
+                    Ok
+                </button>
+            </div>
         </div>
-    </div>
+    </Transition>
 </template>
 
 
 
 <style scoped>
-/* Стили для модального окна */
-.modal {
-    display: none;
+.modal-mask {
     position: fixed;
-    z-index: 1;
-    left: 0;
+    z-index: 9998;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    transition: opacity 0.3s ease;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+.modal-container {
+    width: auto;
+    margin: auto;
+    padding: 16px 12px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    transition: all 0.3s ease;
 }
 
-.close {
-    color: #aaa;
+.modal-default-button {
     float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+}
+
+.modal-enter-from {
+    opacity: 0;
+}
+
+.modal-leave-to {
+    opacity: 0;
 }
 </style>

@@ -1,5 +1,6 @@
 <script setup>
-import Column from "/src/components/Column.vue";
+import Column from "/src/components/Column/Column.vue";
+import CreateColumnMob from "/src/components/Column/CreateColumnMob.vue";
 </script>
 
 <template>
@@ -8,7 +9,10 @@ import Column from "/src/components/Column.vue";
         <column title="in progress" amountTasks="3" />
         <column title="done" amountTasks="456" />
 
-        <div class="main__create-column">
+        <div
+            class="main__create-column"
+            @click="$emit('open-modal', CreateColumnMob)"
+        >
             <div class="create-column__text">Create column</div>
             <div class="create-column__icon">
                 <img alt="plus" src="/src/assets/images/main/create-plus.svg" />
