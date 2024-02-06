@@ -26,12 +26,13 @@ import CreateColumnMob from "/src/components/Column/CreateColumnMob.vue";
     display: flex;
     flex-direction: column;
     padding: 24px 10px 0;
+    justify-content: center;
+    align-items: center; 
 }
 
 .main__create-column {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 
 .create-column__text {
