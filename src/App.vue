@@ -3,6 +3,7 @@ import { ref } from "vue";
 import Header from "/src/components/Header.vue";
 import Main from "/src/components/Main.vue";
 import Modal from "/src/components/Modal.vue";
+import CreateColumnMob from "/src/components/Column/CreateColumnMob.vue";
 
 const isShowModal = ref(false);
 const modalComponent = ref(null);
@@ -30,9 +31,6 @@ function closeModal() {
         <modal v-show="isShowModal"
         :defaultComponent="modalComponent"
             @close="closeModal">
-            <template #body>
-                <h3>custom header</h3>
-            </template>
         </modal>
     </Teleport>
 </template>

@@ -1,5 +1,4 @@
 <script setup>
-
 const props = defineProps({
     defaultComponent: {
         type: Object,
@@ -13,9 +12,11 @@ const props = defineProps({
         <div class="modal-mask">
             <div v-if="defaultComponent" class="modal-container">
                 <component :is="defaultComponent" />
-                <button class="modal-default-button" @click="$emit('close')">
-                    Ok
-                </button>
+                <div class="modal-container__button-wraper">
+                    <button class="modal-default-button" @click="$emit('close')">
+                        Cancel
+                    </button>
+                </div>
             </div>
         </div>
     </Transition>
@@ -46,8 +47,14 @@ const props = defineProps({
     transition: all 0.3s ease;
 }
 
+.modal-container__button-wraper {
+    display: flex;
+    justify-content: center;
+}
+
 .modal-default-button {
-    float: right;
+    color: var(--main-color-light-blue);
+    font-size: 14px;
 }
 
 .modal-enter-from {
