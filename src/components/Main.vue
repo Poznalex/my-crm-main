@@ -1,6 +1,7 @@
 <script setup>
 import Column from "/src/components/Column/Column.vue";
-import CreateColumnMob from "/src/components/Column/CreateColumnMob.vue";
+import CreateColumnForm from "/src/components/Column/CreateColumnForm.vue";
+import ModalClose from "/src/components/Modal/ModalClose.vue";
 </script>
 
 <template>
@@ -11,7 +12,7 @@ import CreateColumnMob from "/src/components/Column/CreateColumnMob.vue";
 
         <div
             class="main__create-column"
-            @click="$emit('open-modal', CreateColumnMob)"
+            @click="$emit('open-modal', CreateColumnForm)"
         >
             <div class="create-column__text">Create column</div>
             <div class="create-column__icon">

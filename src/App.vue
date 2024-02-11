@@ -2,8 +2,7 @@
 import { ref } from "vue";
 import Header from "/src/components/Header.vue";
 import Main from "/src/components/Main.vue";
-import Modal from "/src/components/Modal.vue";
-import CreateColumnMob from "/src/components/Column/CreateColumnMob.vue";
+import Modal from "/src/components/Modal/Modal.vue";
 
 const isShowModal = ref(false);
 const modalComponent = ref(null);

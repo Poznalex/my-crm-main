@@ -11,12 +11,7 @@ const props = defineProps({
     <Transition name="modal">
         <div class="modal-mask">
             <div v-if="defaultComponent" class="modal-container">
-                <component :is="defaultComponent" />
-                <div class="modal-container__button-wraper">
-                    <button class="modal-default-button" @click="$emit('close')">
-                        Cancel
-                    </button>
-                </div>
+                <component :is="defaultComponent" @close="$emit('close')" />
             </div>
         </div>
     </Transition>
@@ -38,23 +33,17 @@ const props = defineProps({
 }
 
 .modal-container {
-    width: auto;
-    margin: auto;
+    width: 100%;
+    max-width: 982px;
+    margin-top: 62px;
+    margin-right: 10px;
+    margin-bottom: auto;
+    margin-left: 10px;
     padding: 16px 12px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
     transition: all 0.3s ease;
-}
-
-.modal-container__button-wraper {
-    display: flex;
-    justify-content: center;
-}
-
-.modal-default-button {
-    color: var(--main-color-light-blue);
-    font-size: 14px;
 }
 
 .modal-enter-from {
@@ -63,5 +52,11 @@ const props = defineProps({
 
 .modal-leave-to {
     opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-container {
+        margin: auto;
+    }
 }
 </style>

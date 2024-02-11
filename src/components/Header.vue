@@ -1,5 +1,5 @@
 <script setup>
-import CreateColumnWeb from "/src/components/Column/CreateColumnWeb.vue";
+import CreateColumnForm from "/src/components/Column/CreateColumnForm.vue";
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import CreateColumnWeb from "/src/components/Column/CreateColumnWeb.vue";
         </div>
         <button
             class="header__button btn-column"
-            @click="$emit('open-modal', CreateColumnWeb)"
+            @click="$emit('open-modal', CreateColumnForm)"
         >
             Create column
         </button>
