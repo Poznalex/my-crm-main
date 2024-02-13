@@ -39,6 +39,7 @@
     font-weight: 500;
     color: var(--main-color-grey);
 }
+
 .card__hours {
     display: none;
     height: 20px;
