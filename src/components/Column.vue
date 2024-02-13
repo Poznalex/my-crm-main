@@ -1,6 +1,11 @@
 <script>
+import TaskCard from "/src/components/TaskCard/TaskCard.vue";
+
 export default {
-    name: "column",
+    components: {
+        TaskCard,
+    },
+
     props: {
         title: {
             type: String,
@@ -40,11 +45,19 @@ export default {
                 src="/src/assets/images/main/column-arrow.svg"
             />
         </div>
-        <div class="column__tasks"></div>
+        <div class="column__tasks">
+            <TaskCard projectName="X" />
+            <TaskCard projectName="X" />
+            <TaskCard projectName="X" />
+        </div>
     </div>
 </template>
 
 <style>
+.column {
+    width: 100%;
+}
+
 .column__header {
     display: flex;
     justify-content: space-between;
@@ -80,14 +93,11 @@ export default {
 
 .column__tasks {
     display: none;
-    background-color: var(--main-color-white);
-    min-height: 44px;
-    margin-bottom: 12px;
-    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .column--open .column__tasks {
-    display: flex;
+    display: block;
 }
 
 @media screen and (min-width: 768px) {
@@ -108,15 +118,8 @@ export default {
     }
 
     .column__tasks {
-        display: flex;
-        background-color: var(--main-color-white);
-        min-height: 252px;
-        margin-top: -50px;
-        border-radius: 10px;
-    }
-
-    .column__tasks {
-        display: flex;
+        display: block;
+        margin-top: -58px;
     }
 
     .column__arrow {
