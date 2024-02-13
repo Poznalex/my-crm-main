@@ -1,5 +1,7 @@
 <script setup>
-import Column from "/src/components/Column.vue";
+import Column from "/src/components/Column/Column.vue";
+import CreateColumnForm from "/src/components/Column/CreateColumnForm.vue";
+import ModalClose from "/src/components/Modal/ModalClose.vue";
 </script>
 
 <template>
@@ -8,7 +10,10 @@ import Column from "/src/components/Column.vue";
         <Column title="in progress" amountTasks="3" />
         <Column title="done" amountTasks="456" />
 
-        <div class="main__create-column">
+        <div
+            class="main__create-column"
+            @click="$emit('open-modal', CreateColumnForm)"
+        >
             <div class="create-column__text">Create column</div>
             <div class="create-column__icon">
                 <img alt="plus" src="/src/assets/images/main/create-plus.svg" />
@@ -22,12 +27,13 @@ import Column from "/src/components/Column.vue";
     display: flex;
     flex-direction: column;
     padding: 24px 10px 0;
+    justify-content: center;
+    align-items: center; 
 }
 
 .main__create-column {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 
 .create-column__text {
