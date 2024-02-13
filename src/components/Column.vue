@@ -47,8 +47,8 @@ export default {
         </div>
         <div class="column__tasks">
             <TaskCard projectName="X" />
-            <TaskCard />
-            <TaskCard />
+            <TaskCard projectName="X" />
+            <TaskCard projectName="X" />
         </div>
     </div>
 </template>

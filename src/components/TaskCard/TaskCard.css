@@ -31,9 +31,21 @@
     text-overflow: ellipsis;
 }
 
-.card__until,
+.card__until {
+    display: none;
+    height: 20px;
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--main-color-grey);
+}
 .card__hours {
     display: none;
+    height: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--main-color-grey);
+    margin-bottom: 16px;
 }
 
 .card__inner-wraper {
@@ -94,22 +106,8 @@
         margin-bottom: 16px;
     }
 
-    .card__until {
+    .card__until, .card__hours {
         display: flex;
-        height: 20px;
-        margin-bottom: 6px;
-        font-size: 16px;
-        font-weight: 500;
-        color: var(--main-color-grey);
-    }
-
-    .card__hours {
-        display: flex;
-        height: 20px;
-        font-size: 16px;
-        font-weight: 500;
-        color: var(--main-color-grey);
-        margin-bottom: 16px;
     }
 
     .card__avatar {
