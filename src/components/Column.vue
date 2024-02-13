@@ -1,11 +1,9 @@
 <script>
-import taskCard from '/src/components/TaskCard/taskCard.vue';
+import TaskCard from "/src/components/TaskCard/TaskCard.vue";
 
 export default {
-    name: "column",
-
     components: {
-        taskCard,
+        TaskCard,
     },
 
     props: {
@@ -48,11 +46,10 @@ export default {
             />
         </div>
         <div class="column__tasks">
-            <task-card nameProject="X" />
-            <task-Card />
-            <task-Card />
+            <TaskCard projectName="X" />
+            <TaskCard />
+            <TaskCard />
         </div>
-
     </div>
 </template>
 
@@ -94,48 +91,9 @@ export default {
     rotate: 180deg;
 }
 
-.column--open .column__header img {
-    rotate: 180deg;
-}
-
-.column--open .column__header img {
-    rotate: 180deg;
-}
-
 .column__tasks {
     display: none;
     margin-bottom: 10px;
-}
-
-.column--open .column__tasks {
-    display: block;
-}
-
-@media screen and (min-width: 768px) {
-    .column {
-        margin-right: 20px;
-        width: 526px;
-        flex-shrink: 0;
-    }
-
-    .column__header {
-        align-items: start;
-        height: 118px;
-        padding: 10px 24px;
-    }
-
-    .column__header-title {
-        font-size: 20px;
-    }
-
-    .column__tasks {
-        display: block;
-        margin-top: -58px;
-    }
-
-    .column__arrow {
-        display: none;
-    }
 }
 
 .column--open .column__tasks {

@@ -1,11 +1,9 @@
 <script>
 export default {
-    name: "task-card",
-
     props: {
-        nameProject: {
+        projectName: {
             type: String,
-            default: '',
+            default: "",
         },
     },
 };
@@ -19,23 +17,25 @@ export default {
             src="/src/assets/images/card/avatar-card.svg"
         />
         <div class="card__texts">
-            <div class="card__header">AMP Project {{ nameProject }}</div>
+            <div class="card__header">AMP Project</div>
             <div class="card__until">Until 17.05.2021</div>
             <div class="card__hours">10 hours</div>
-            <div class="card__inner-wraper"> <!-- For show inner content in row -->
+            <div class="card__inner-wraper">
                 <div class="card__number">BM-675</div>
                 <div class="card__project">
-                    <span class="card__project-title">Project</span>X
+                    <span class="card__project-title">Project</span
+                    >{{ projectName }}
                 </div>
             </div>
         </div>
-            <img class="card__arrow"
-                alt="arrow"
-                src="/src/assets/images/card/arrow-down.svg"
-            />
+        <img
+            class="card__arrow"
+            alt="arrow"
+            src="/src/assets/images/card/arrow-down.svg"
+        />
     </div>
 </template>
 
 <style>
-@import './TaskCard.css'
+@import "./TaskCard.css";
 </style>

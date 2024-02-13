@@ -3,5 +3,5 @@
 
 body {
     background: var(--main-color-transp-blue);
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
 }

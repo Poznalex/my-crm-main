@@ -3,12 +3,13 @@
     align-items: center;
     min-height: 44px;
     margin-bottom: 5px;
+    padding-left: 10px;
     border-radius: 10px;
     background-color: var(--main-color-white);
 }
 
 .card__avatar {
-    margin: 6px 12px 6px 10px;
+    margin-right: 12px;
 }
 
 .card__texts {
@@ -30,10 +31,7 @@
     text-overflow: ellipsis;
 }
 
-.card__until {
-    display: none;
-}
-
+.card__until,
 .card__hours {
     display: none;
 }
@@ -80,12 +78,11 @@
 @media screen and (min-width: 768px) {
     .card {
         position: relative;
-        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         margin-bottom: 12px;
         border-radius: 10px;
         padding: 24px;
-        flex-direction: column;
-        align-items: flex-start;
     }
 
     .card__header {
@@ -93,7 +90,6 @@
         height: auto;
         white-space: normal;
         font-size: 20px;
-        font-weight: 600;
         line-height: 30px;
         margin-bottom: 16px;
     }
@@ -129,7 +125,6 @@
     }
 
     .card__inner-wraper {
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
         margin-top: 0;
@@ -137,7 +132,6 @@
 
     .card__number {
         font-size: 24px;
-        font-weight: 600;
         color: var(--main-color-black);
         order: 1;
     }
