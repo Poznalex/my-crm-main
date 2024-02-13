@@ -1,38 +1,19 @@
-<script>
-import taskCard from '/src/components/TaskCard/taskCard.vue';
+<script setup>
+import {ref} from 'vue';
+import TaskCard from "/src/components/TaskCard/taskCard.vue";
 
-export default {
-    name: "column",
 
-    components: {
-        taskCard,
-    },
+const props = defineProps(["title", "amountTasks"]);
 
-    props: {
-        title: {
-            type: String,
-            default: "",
-        },
 
-        amountTasks: {
-            type: Number,
-            default: "",
-        },
-    },
+let isOpened = ref(false);
 
-    data() {
-        return {
-            isOpened: false,
-        };
-    },
 
-    methods: {
-        showTasks() {
-            const isMobile = window.innerWidth < 768;
-            if (isMobile) this.isOpened = !this.isOpened;
-        },
-    },
+const showTasks = () => {
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) isOpened.value = !isOpened.value;
 };
+
 </script>
 
 <template>
@@ -48,9 +29,9 @@ export default {
             />
         </div>
         <div class="column__tasks">
-            <task-card nameProject="X" />
-            <task-Card />
-            <task-Card />
+            <taskCard nameProject="X" />
+            <taskCard />
+            <taskCard />
         </div>
     </div>
 </template>

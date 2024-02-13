@@ -1,14 +1,5 @@
-<script>
-export default {
-    name: "task-card",
-
-    props: {
-        nameProject: {
-            type: String,
-            default: '',
-        },
-    },
-};
+<script setup>
+    const props = defineProps(["nameProject"]);
 </script>
 
 <template>
