@@ -21,15 +21,14 @@ function closeModal() {
 </script>
 
 <template>
-    <Header 
-        @open-modal="openModal"/>
-    <Main
-        @open-modal="openModal"
-    />
+    <Header @open-modal="openModal" />
+    <Main @open-modal="openModal" />
     <Teleport to="body">
-        <modal v-show="isShowModal"
-        :defaultComponent="modalComponent"
-            @close="closeModal">
+        <modal
+            v-show="isShowModal"
+            :defaultComponent="modalComponent"
+            @close="closeModal"
+        >
         </modal>
     </Teleport>
 </template>

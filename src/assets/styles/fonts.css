@@ -40,7 +40,7 @@
       font-weight: 700;
       src: url('../../../fonts/montserrat-v26-latin-700.eot');
       src: url('../../../fonts/montserrat-v26-latin-700.eot?#iefix') format('embedded-opentype'),
-          url('f../../../onts/montserrat-v26-latin-700.woff2') format('woff2'),
+          url('../../../fonts/montserrat-v26-latin-700.woff2') format('woff2'),
           url('../../../fonts/montserrat-v26-latin-700.woff') format('woff'),
           url('../../../fonts/montserrat-v26-latin-700.ttf') format('truetype'),
           url('../../../fonts/montserrat-v26-latin-700.svg#Montserrat') format('svg');

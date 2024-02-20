@@ -6,9 +6,9 @@ import ModalClose from "/src/components/Modal/ModalClose.vue";
 
 <template>
     <div class="main">
-        <column title="to do" amountTasks="18" />
-        <column title="in progress" amountTasks="3" />
-        <column title="done" amountTasks="456" />
+        <Column title="to do" amountTasks="18" />
+        <Column title="in progress" amountTasks="3" />
+        <Column title="done" amountTasks="456" />
 
         <div
             class="main__create-column"
@@ -28,12 +28,12 @@ import ModalClose from "/src/components/Modal/ModalClose.vue";
     flex-direction: column;
     padding: 24px 10px 0;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .main__create-column {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .create-column__text {
