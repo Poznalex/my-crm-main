@@ -11,8 +11,7 @@ const props = defineProps({
     <Transition name="modal">
         <div class="modal-mask">
             <div v-if="defaultComponent" class="modal-container">
-                <component :is="defaultComponent" />
-                <div class="modal__cancel" @click="$emit('close')">Cancel</div>
+                <component :is="defaultComponent" @close="$emit('close')" />
             </div>
         </div>
     </Transition>
@@ -34,7 +33,10 @@ const props = defineProps({
 .modal-container {
     width: 100%;
     max-width: 982px;
-    margin: 62px 10px auto;
+    margin-top: 62px;
+    margin-right: 10px;
+    margin-bottom: auto;
+    margin-left: 10px;
     padding: 16px 12px;
     background-color: #fff;
     border-radius: 10px;
@@ -61,10 +63,6 @@ const props = defineProps({
 @media screen and (min-width: 768px) {
     .modal-container {
         margin: auto;
-    }
-
-    .modal__cancel {
-        font-size: 20px;
     }
 }
 </style>
