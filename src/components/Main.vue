@@ -1,7 +1,7 @@
 <script setup>
-import Column from "/src/components/Column/Column.vue";
-import CreateColumnForm from "/src/components/Column/CreateColumnForm.vue";
-import ModalClose from "/src/components/Modal/ModalClose.vue";
+import Column from '/src/components/Column/Column.vue';
+import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
+import ModalClose from '/src/components/Modal/ModalClose.vue';
 </script>
 
 <template>
@@ -34,6 +34,7 @@ import ModalClose from "/src/components/Modal/ModalClose.vue";
 .main__create-column {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .create-column__text {
@@ -54,6 +55,8 @@ import ModalClose from "/src/components/Modal/ModalClose.vue";
 @media screen and (min-width: 768px) {
     .main {
         flex-direction: row;
+        justify-content: unset;
+        align-items: unset;
         padding: 93px 24px 0;
         overflow-x: scroll;
     }
@@ -65,6 +68,8 @@ import ModalClose from "/src/components/Modal/ModalClose.vue";
 
 @media screen and (min-width: 1024px) {
     .main {
+        justify-content: unset;
+        align-items: unset;
         padding: 93px 60px 0;
     }
 }
@@ -72,6 +77,8 @@ import ModalClose from "/src/components/Modal/ModalClose.vue";
 @media screen and (min-width: 1400px) {
     .main {
         padding: 93px 150px 0;
+        justify-content: unset;
+        align-items: unset;
     }
 }
 </style>

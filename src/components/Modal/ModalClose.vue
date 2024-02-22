@@ -1,16 +1,11 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
-   
-        <div class="modal-default-button" @click="$emit('close')">
-            Cancel
-        </div>
+    <div class="modal__button" @click="$emit('close')">Cancel</div>
 </template>
 
 <style scoped>
-
-.modal-default-button {
+.modal__button {
     color: var(--main-color-light-blue);
     font-size: 14px;
 }
