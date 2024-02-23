@@ -7,27 +7,27 @@ import Modal from '/src/components/Modal/Modal.vue';
 const isShowModal = ref(false);
 const modalComponent = ref(null);
 
-function OpenModal(data) {
+function openModal(data) {
     isShowModal.value = true;
     modalComponent.value = data;
 }
 
-function CloseModal() {
+function closeModal() {
     isShowModal.value = false;
     modalComponent.value = null;
 }
 </script>
 
 <template>
-    <Header @open-modal="OpenModal" />
-    <Main @open-modal="OpenModal" />
+    <Header @open-modal="openModal" />
+    <Main @open-modal="openModal" />
     <Teleport to="body">
-        <modal
+        <Modal
             v-show="isShowModal"
             :defaultComponent="modalComponent"
-            @close="CloseModal"
+            @close="closeModal"
         >
-        </modal>
+        </Modal>
     </Teleport>
 </template>
 

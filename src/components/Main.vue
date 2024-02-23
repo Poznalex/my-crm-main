@@ -1,7 +1,6 @@
 <script setup>
 import Column from '/src/components/Column/Column.vue';
 import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
-import ModalClose from '/src/components/Modal/ModalClose.vue';
 </script>
 
 <template>
@@ -10,10 +9,7 @@ import ModalClose from '/src/components/Modal/ModalClose.vue';
         <Column title="in progress" amountTasks="3" />
         <Column title="done" amountTasks="456" />
 
-        <div
-            class="main__create-column"
-            @click="$emit('open-modal', CreateColumnForm)"
-        >
+        <div class="main__create-column" @click="$emit('open-modal', CreateColumnForm)">
             <div class="create-column__text">Create column</div>
             <div class="create-column__icon">
                 <img alt="plus" src="/src/assets/images/main/create-plus.svg" />
@@ -68,8 +64,6 @@ import ModalClose from '/src/components/Modal/ModalClose.vue';
 
 @media screen and (min-width: 1024px) {
     .main {
-        justify-content: unset;
-        align-items: unset;
         padding: 93px 60px 0;
     }
 }
@@ -77,8 +71,6 @@ import ModalClose from '/src/components/Modal/ModalClose.vue';
 @media screen and (min-width: 1400px) {
     .main {
         padding: 93px 150px 0;
-        justify-content: unset;
-        align-items: unset;
     }
 }
 </style>

@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps(["projectName"]);
+const props = defineProps(['projectName']);
 </script>
 
 <template>
@@ -29,5 +29,5 @@ const props = defineProps(["projectName"]);
 </template>
 
 <style>
-@import "./TaskCard.css";
+@import './TaskCard.css';
 </style>

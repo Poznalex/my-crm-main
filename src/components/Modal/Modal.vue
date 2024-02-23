@@ -11,7 +11,8 @@ const props = defineProps({
     <Transition name="modal">
         <div class="modal-mask">
             <div v-if="defaultComponent" class="modal-container">
-                <component :is="defaultComponent" @close="$emit('close')" />
+                <component :is="defaultComponent" />
+                <div class="modal__cancel" @click="$emit('close')">Cancel</div>
             </div>
         </div>
     </Transition>
@@ -49,9 +50,21 @@ const props = defineProps({
     opacity: 0;
 }
 
+.modal__cancel {
+    width: fit-content;
+    float: right;
+    color: var(--main-color-light-blue);
+    font-size: 14px;
+    cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
     .modal-container {
         margin: auto;
+    }
+
+    .modal__cancel {
+        font-size: 20px;
     }
 }
 </style>

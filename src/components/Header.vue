@@ -1,5 +1,5 @@
 <script setup>
-import CreateColumnForm from "/src/components/Column/CreateColumnForm.vue";
+import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
 </script>
 
 <template>
