@@ -12,9 +12,7 @@ const showTasks = () => {
 <template>
     <div class="column" :class="{ 'column--open': isOpened }">
         <div class="column__header" @click="showTasks">
-            <div class="column__header-title">
-                {{ title }} - {{ amountTasks }}
-            </div>
+            <div class="column__header-title">{{ title }} - {{ amountTasks }}</div>
             <img
                 class="column__arrow"
                 alt="arrow"
