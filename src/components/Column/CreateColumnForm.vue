@@ -7,8 +7,12 @@
             <label class="create-column__form-label" for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="NEW" maxlength="75" />
         </form>
-        <button class="create-column__button-add">Add</button>
-        <button class="create-column__button-cancel" @click="$emit('close')">
+        <button type="button" class="create-column__button-add">Add</button>
+        <button
+            type="button"
+            class="create-column__button-cancel"
+            @click="$emit('close')"
+        >
             Cancel
         </button>
     </div>
@@ -69,8 +73,6 @@
     .create-column {
         justify-content: flex-end;
         align-items: center;
-        flex-wrap: wrap;
-        padding: 16px;
     }
 
     .create-column__title {
@@ -87,15 +89,19 @@
         border-radius: 10px;
         margin-right: 42px;
         margin-bottom: 0px;
+        font-size: 20px;
     }
 
     .create-column__form {
         margin-bottom: 64px;
     }
 
+    .create-column__form-label {
+        font-size: 14px;
+    }
+
     .create-column__button-cancel {
         font-size: 20px;
-        margin-right: 0px;
     }
 }
 </style>

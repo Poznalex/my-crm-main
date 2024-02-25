@@ -53,6 +53,7 @@ const props = defineProps({
 @media screen and (min-width: 768px) {
     .modal-container {
         margin: auto 10px;
+        padding: 32px;
     }
 }
 </style>

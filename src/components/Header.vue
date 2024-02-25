@@ -12,6 +12,7 @@ import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
             />
         </div>
         <button
+            type="button"
             class="header__button btn-column"
             @click="$emit('open-modal', CreateColumnForm)"
         >
