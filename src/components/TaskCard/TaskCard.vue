@@ -1,12 +1,5 @@
-<script>
-export default {
-    props: {
-        projectName: {
-            type: String,
-            default: "",
-        },
-    },
-};
+<script setup>
+const props = defineProps(['projectName']);
 </script>
 
 <template>
@@ -23,8 +16,7 @@ export default {
             <div class="card__inner-wraper">
                 <div class="card__number">BM-675</div>
                 <div class="card__project">
-                    <span class="card__project-title">Project</span
-                    >{{ projectName }}
+                    <span class="card__project-title">Project</span>{{ projectName }}
                 </div>
             </div>
         </div>
@@ -37,5 +29,5 @@ export default {
 </template>
 
 <style>
-@import "./TaskCard.css";
+@import './TaskCard.css';
 </style>
