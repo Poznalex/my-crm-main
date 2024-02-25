@@ -27,6 +27,7 @@ const props = defineProps({
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
+    justify-content: center;
     transition: opacity 0.3s ease;
 }
 
