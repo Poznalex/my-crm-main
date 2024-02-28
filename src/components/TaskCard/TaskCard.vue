@@ -1,9 +1,11 @@
 <script setup>
+import TaskInformation from '/src/components/TaskCard/TaskInformation.vue';
+
 const props = defineProps(['projectName']);
 </script>
 
 <template>
-    <div class="card">
+    <div class="card" @click="$emit('open-modal', TaskInformation)">
         <img
             class="card__avatar"
             alt="user"

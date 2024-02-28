@@ -1,0 +1,144 @@
+.task {
+    position: relative;
+}
+
+.task-close {
+    position: absolute;
+    top: -4px;
+    right: -8px;
+}
+
+.task__task-number {
+    font-size: 16px;
+    font-weight: 600;
+    margin: -4px 0px 28px;
+}
+
+.task__project-name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.task__task-description {
+    font-size: 10px;
+    color: var(--main-color-grey);
+    margin: 12px 0px 4px;
+}
+
+.task__task-content {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.task__until {
+    display: flex;
+    align-items: center;
+    margin: 14px 0px 16px;
+}
+
+.task__until-date {
+    margin-left: 10px;
+    font-size: 10px;
+    color: var(--main-color-grey);
+}
+
+.task__estimate {
+    display: flex;
+    align-items: center;
+}
+
+.task__estimate-date {
+    margin-left: 10px;
+    font-size: 10px;
+    color: var(--main-color-grey);
+}
+
+.task__created {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 17px 4px 4px 0px;
+}
+
+.task__created-date {
+    font-size: 10px;
+    color: var(--main-color-grey);
+    margin-right: 12px;
+}
+
+.task__user-name {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .task__project-name {
+        font-size: 32px;
+    }
+
+    .task-close {
+        position: absolute;
+        top: -16px;
+        right: -24px;
+    }
+
+    .task__user-wrapper {
+        position: absolute;
+        top: 42px;
+    }
+
+    .task__user-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .task__user-name {
+        display: flex;
+        margin-right: 16px;
+        font-weight: 600;
+    }
+
+    .task__user-avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .task__task-description {
+        font-size: 14px;
+        font-weight: 600;
+        margin: 32px 0px 12px;
+    }
+
+    .task__task-content {
+        font-size: 14px;
+        margin-bottom: 27px;
+    }
+
+    .task__date-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .task__until {
+        margin: 0;
+    }
+
+    .task__until-date {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .task__estimate {
+        margin-right: 239px;
+    }
+
+    .task__estimate-date {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .task__created-date {
+        font-size: 14px;
+        font-weight: 600;
+        margin-right: 0;
+    }
+}
