@@ -8,10 +8,18 @@ import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
         <Column
             title="to do"
             amountTasks="18"
-            @open-modal="(e) => $emit('open-modal', e)"
+            @open-modal="(TaskInformation) => $emit('open-modal', TaskInformation)"
         />
-        <Column title="in progress" amountTasks="3" />
-        <Column title="done" amountTasks="456" />
+        <Column
+            title="in progress"
+            amountTasks="3"
+            @open-modal="(TaskInformation) => $emit('open-modal', TaskInformation)"
+        />
+        <Column
+            title="done"
+            amountTasks="456"
+            @open-modal="(TaskInformation) => $emit('open-modal', TaskInformation)"
+        />
 
         <div class="main__create-column" @click="$emit('open-modal', CreateColumnForm)">
             <div class="create-column__text">Create column</div>

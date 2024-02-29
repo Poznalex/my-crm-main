@@ -1,31 +1,32 @@
 .task {
     position: relative;
+    box-sizing: content-box;
 }
 
-.task-close {
+.task__close {
     position: absolute;
     top: -4px;
     right: -8px;
 }
 
-.task__task-number {
+.task__number {
     font-size: 16px;
     font-weight: 600;
     margin: -4px 0px 28px;
 }
 
-.task__project-name {
+.task__project {
     font-size: 20px;
     font-weight: 700;
 }
 
-.task__task-description {
+.task__description-title {
     font-size: 10px;
     color: var(--main-color-grey);
     margin: 12px 0px 4px;
 }
 
-.task__task-content {
+.task__description {
     font-size: 12px;
     font-weight: 500;
 }
@@ -57,7 +58,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin: 17px 4px 4px 0px;
+    margin-top: 17px;
 }
 
 .task__created-date {
@@ -71,24 +72,20 @@
 }
 
 @media screen and (min-width: 768px) {
-    .task__project-name {
+    .task__project {
         font-size: 32px;
     }
 
-    .task-close {
-        position: absolute;
+    .task__close {
         top: -16px;
         right: -24px;
     }
 
-    .task__user-wrapper {
-        position: absolute;
-        top: 42px;
-    }
-
-    .task__user-wrapper {
+    .task__user {
         display: flex;
         align-items: center;
+        position: absolute;
+        top: 42px;
     }
 
     .task__user-name {
@@ -102,20 +99,21 @@
         height: 50px;
     }
 
-    .task__task-description {
+    .task__description-title {
         font-size: 14px;
         font-weight: 600;
         margin: 32px 0px 12px;
     }
 
-    .task__task-content {
+    .task__description {
         font-size: 14px;
         margin-bottom: 27px;
     }
 
-    .task__date-wrapper {
+    .task__date {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .task__until {
@@ -136,9 +134,13 @@
         font-weight: 600;
     }
 
+    .task__created {
+        margin-top: 0;
+    }
+
     .task__created-date {
         font-size: 14px;
         font-weight: 600;
-        margin-right: 0;
+        margin: 0;
     }
 }

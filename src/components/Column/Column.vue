@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue';
 import TaskCard from '/src/components/TaskCard/TaskCard.vue';
-import Modal from '/src/components/Modal/Modal.vue';
 
 const props = defineProps(['title', 'amountTasks']);
 let isOpened = ref(false);
@@ -21,9 +20,18 @@ const showTasks = () => {
             />
         </div>
         <div class="column__tasks">
-            <TaskCard projectName="X" @open-modal="(e) => $emit('open-modal', e)" />
-            <TaskCard projectName="X" />
-            <TaskCard projectName="X" />
+            <TaskCard
+                projectName="X"
+                @open-modal="(TaskInformation) => $emit('open-modal', TaskInformation)"
+            />
+            <TaskCard
+                projectName="X"
+                @open-modal="(TaskInformation) => $emit('open-modal', TaskInformation)"
+            />
+            <TaskCard
+                projectName="X"
+                @open-modal="(TaskInformation) => $emit('open-modal', TaskInformation)"
+            />
         </div>
     </div>
 </template>

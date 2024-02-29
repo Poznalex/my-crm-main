@@ -2,17 +2,13 @@
 
 <template>
     <div class="task">
-        <button class="task-close">
-            <img
-                alt="button close"
-                src="/src/assets/images/card/close-taskinformation.svg"
-                @click="$emit('close')"
-            />
+        <button class="task__close" @click="$emit('close')">
+            <img alt="x" src="/src/assets/images/card/close-taskinformation.svg" />
         </button>
-        <div class="task__task-number">BM-675</div>
-        <div class="task__project-name">AMP Project X</div>
-        <div class="task__task-description">Description</div>
-        <div class="task__task-content">
+        <div class="task__number">BM-675</div>
+        <div class="task__project">AMP Project X</div>
+        <div class="task__description-title">Description</div>
+        <div class="task__description">
             12.05.Rosemary Fell was not exactly beautiful. She was young, brilliant,
             extremely modern, well dressed and amazingly well read in the newest of the
             new books. Rosemary had been married two years, and her husband was very fond
@@ -20,7 +16,7 @@
             Rosemary wanted to shop, she would go to Paris as you and I would go to Bond
             Street.
         </div>
-        <div class="task__date-wrapper">
+        <div class="task__date">
             <div class="task__until">
                 <img alt="calendar" src="/src/assets/images/card/calendar.svg" />
                 <div class="task__until-date">Until 17.05.2021</div>
@@ -31,7 +27,7 @@
             </div>
             <div class="task__created">
                 <div class="task__created-date">Created 11 March 2021, 11:55</div>
-                <div class="task__user-wrapper">
+                <div class="task__user">
                     <div class="task__user-name">Abdul</div>
                     <img
                         class="task__user-avatar"
