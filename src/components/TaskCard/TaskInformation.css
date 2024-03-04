@@ -1,46 +1,58 @@
 .task {
     position: relative;
-    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .task__close {
     position: absolute;
-    top: -4px;
-    right: -8px;
+    top: -2px;
+    right: 0px;
+    padding: 0px;
 }
 
 .task__number {
     font-size: 16px;
     font-weight: 600;
-    margin: -4px 0px 28px;
 }
 
-.task__project {
+.task__project-name {
     font-size: 20px;
     font-weight: 700;
+    overflow-wrap: break-word;
+}
+
+.task__user-desktop {
+    display: none;
 }
 
 .task__description-title {
     font-size: 10px;
     color: var(--main-color-grey);
-    margin: 12px 0px 4px;
 }
 
-.task__description {
+.task__description-content {
     font-size: 12px;
     font-weight: 500;
+    margin-top: 13px;
+}
+
+.task__date {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    color: var(--main-color-grey);
+    font-size: 10px;
 }
 
 .task__until {
     display: flex;
     align-items: center;
-    margin: 14px 0px 16px;
 }
 
 .task__until-date {
     margin-left: 10px;
-    font-size: 10px;
-    color: var(--main-color-grey);
 }
 
 .task__estimate {
@@ -50,30 +62,21 @@
 
 .task__estimate-date {
     margin-left: 10px;
-    font-size: 10px;
-    color: var(--main-color-grey);
 }
 
 .task__created {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-top: 17px;
 }
 
 .task__created-date {
-    font-size: 10px;
-    color: var(--main-color-grey);
-    margin-right: 12px;
-}
-
-.task__user-name {
-    display: none;
+    margin-right: 5px;
 }
 
 @media screen and (min-width: 768px) {
-    .task__project {
-        font-size: 32px;
+    .task {
+        gap: 28px;
     }
 
     .task__close {
@@ -81,11 +84,20 @@
         right: -24px;
     }
 
-    .task__user {
+    .task__project {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .task__project-name {
+        font-size: 32px;
+        inline-size: 500px;
+    }
+
+    .task__user-desktop {
         display: flex;
         align-items: center;
-        position: absolute;
-        top: 42px;
     }
 
     .task__user-name {
@@ -102,22 +114,17 @@
     .task__description-title {
         font-size: 14px;
         font-weight: 600;
-        margin: 32px 0px 12px;
     }
 
-    .task__description {
+    .task__description-content {
         font-size: 14px;
-        margin-bottom: 27px;
+        text-align: left;
     }
 
     .task__date {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .task__until {
-        margin: 0;
+        flex-direction: row;
+        gap: 0;
     }
 
     .task__until-date {
@@ -126,21 +133,23 @@
     }
 
     .task__estimate {
-        margin-right: 239px;
+        margin-left: 86px;
+        margin-right: auto;
     }
 
     .task__estimate-date {
         font-size: 14px;
         font-weight: 600;
-    }
-
-    .task__created {
-        margin-top: 0;
+        
     }
 
     .task__created-date {
         font-size: 14px;
         font-weight: 600;
         margin: 0;
+    }
+
+    .task__user-mob {
+        display: none;
     }
 }

@@ -22,15 +22,15 @@ const showTasks = () => {
         <div class="column__tasks">
             <TaskCard
                 projectName="X"
-                @open-modal="(TaskInformation) => $emit('open-modal', TaskInformation)"
+                @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
             />
             <TaskCard
                 projectName="X"
-                @open-modal="(TaskInformation) => $emit('open-modal', TaskInformation)"
+                @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
             />
             <TaskCard
                 projectName="X"
-                @open-modal="(TaskInformation) => $emit('open-modal', TaskInformation)"
+                @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
             />
         </div>
     </div>
