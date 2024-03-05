@@ -1,5 +1,6 @@
 <script setup>
 import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
+import CreateTaskForm from '/src/components/TaskCard/CreateTaskForm.vue';
 </script>
 
 <template>
@@ -18,10 +19,15 @@ import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
         >
             Create column
         </button>
-        <button class="header__button btn-task">Create task</button>
-        <div class="header__plus">
+        <button
+            class="header__button btn-task"
+            @click="$emit('open-modal', CreateTaskForm)"
+        >
+            Create task
+        </button>
+        <button class="header__plus" @click="$emit('open-modal', CreateTaskForm)">
             <img alt="logo" src="/src/assets/images/header/icon-plus.svg" />
-        </div>
+        </button>
     </div>
 </template>
 
