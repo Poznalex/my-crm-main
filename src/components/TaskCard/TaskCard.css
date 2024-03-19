@@ -107,7 +107,8 @@
         margin-bottom: 16px;
     }
 
-    .card__until, .card__hours {
+    .card__until,
+    .card__hours {
         display: flex;
     }
 

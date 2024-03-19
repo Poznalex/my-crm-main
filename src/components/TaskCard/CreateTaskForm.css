@@ -1,0 +1,244 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.input-forms {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--main-color-grey);
+}
+
+input:active,
+input:focus,
+.description-input:active,
+.description-input:focus {
+    outline: none;
+    border-color: var(--main-color-light-blue);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+input {
+    padding: 6px 12px;
+}
+
+.description-header {
+    display: none;
+}
+
+.description-input {
+    width: 100%;
+    height: 29px;
+    box-sizing: border-box;
+    border: 1px solid var(--main-color-grey);
+    border-radius: 4px;
+    resize: none;
+    padding: 6px 12px;
+    overflow: hidden;
+}
+
+textarea::placeholder {
+    font-size: 11px;
+    color: var(--main-color-grey);
+    font-family: 'Montserrat';
+    height: 12px;
+}
+
+.until-container {
+    position: relative;
+    width: 100%;
+}
+
+.until-calendar {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+}
+
+.estimation-container {
+    position: relative;
+    width: 100%;
+}
+
+.estimation-clock {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+}
+
+.author-container {
+    position: relative;
+    width: 100%;
+}
+
+.author-arrow {
+    position: absolute;
+    top: 11px;
+    right: 9px;
+    cursor: pointer;
+}
+
+.author-userpic {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    cursor: pointer;
+}
+
+.author-input::placeholder {
+    font-weight: 500;
+    transform: translateX(18px);
+}
+
+.btn-create {
+    background-color: var(--main-color-pink);
+    font-size: 14px;
+    color: var(--main-color-white);
+    text-align: center;
+    border-radius: 6px;
+    padding: 6px;
+    margin-top: 14px;
+}
+
+.btn-cancel {
+    color: var(--main-color-light-blue);
+    font-size: 14px;
+    line-height: 10px;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+@media screen and (min-width: 768px) {
+    .body {
+        display: block;
+    }
+
+    .title {
+        font-size: 32px;
+        margin-bottom: 27px;
+    }
+
+    .input-forms {
+        gap: 16px;
+    }
+
+    label {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .name-input::placeholder,
+    .until-input::placeholder,
+    .estimation-input::placeholder,
+    .author::placeholder {
+        font-size: 14px;
+    }
+
+    .description-header {
+        display: flex;
+        align-items: center;
+        background-color: var(--main-color-light-grey);
+        padding: 12px;
+        border: 1px solid;
+        border-bottom: 0px;
+        border-radius: 4px 4px 0px 0px;
+        gap: 32px;
+    }
+
+    img {
+        cursor: pointer;
+    }
+
+    .description-input {
+        border-radius: 0px 0px 4px 4px;
+        height: 174px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    textarea::placeholder {
+        font-size: 13px;
+    }
+
+    .until-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .until-calendar {
+        position: absolute;
+        top: 6px;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+    }
+
+    .estimation-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .estimation-clock {
+        position: absolute;
+        top: 6px;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .until,
+    .estimation,
+    .author {
+        width: calc(50% - 1%);
+    }
+
+    .btn-container {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 42px;
+        margin-top: 66px;
+    }
+
+    .btn-create {
+        padding: 7px 43px 9px;
+        font-size: 20px;
+        margin: 0px;
+    }
+
+    .btn-cancel {
+        font-size: 20px;
+        padding: 0px;
+    }
+}
