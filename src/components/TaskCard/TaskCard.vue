@@ -5,7 +5,7 @@ const props = defineProps(['projectName']);
 </script>
 
 <template>
-    <div class="card" @click="$emit('open-modal', taskInformation)">
+    <div class="card" @click="$emit('open-modal', TaskInformation)">
         <img
             class="card__avatar"
             alt="user"
