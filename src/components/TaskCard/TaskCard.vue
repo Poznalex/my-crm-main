@@ -1,5 +1,5 @@
 <script setup>
-import taskInformation from '/src/components/TaskCard/TaskInformation.vue';
+import TaskInformation from '/src/components/TaskCard/TaskInformation.vue';
 
 const props = defineProps(['projectName']);
 </script>
