@@ -5,9 +5,21 @@ import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
 
 <template>
     <div class="main">
-        <Column title="to do" amountTasks="18" />
-        <Column title="in progress" amountTasks="3" />
-        <Column title="done" amountTasks="456" />
+        <Column
+            title="to do"
+            amountTasks="18"
+            @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
+        />
+        <Column
+            title="in progress"
+            amountTasks="3"
+            @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
+        />
+        <Column
+            title="done"
+            amountTasks="456"
+            @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
+        />
 
         <div class="main__create-column" @click="$emit('open-modal', CreateColumnForm)">
             <div class="create-column__text">Create column</div>
