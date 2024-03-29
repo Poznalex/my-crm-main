@@ -5,22 +5,23 @@ import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
 
 <template>
     <div class="main">
-        <Column
-            title="to do"
-            amountTasks="18"
-            @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
-        />
-        <Column
-            title="in progress"
-            amountTasks="3"
-            @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
-        />
-        <Column
-            title="done"
-            amountTasks="456"
-            @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
-        />
-
+        <div class="columns-wrapper">
+            <Column
+                title="to do"
+                amountTasks="18"
+                @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
+            />
+            <Column
+                title="in progress"
+                amountTasks="3"
+                @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
+            />
+            <Column
+                title="done"
+                amountTasks="456"
+                @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
+            />
+        </div>
         <div class="main__create-column" @click="$emit('open-modal', CreateColumnForm)">
             <div class="create-column__text">Create column</div>
             <div class="create-column__icon">
@@ -45,6 +46,12 @@ import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
     cursor: pointer;
 }
 
+.columns-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .create-column__text {
     width: auto;
     line-height: 18px;
@@ -66,11 +73,28 @@ import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
         justify-content: unset;
         align-items: unset;
         padding: 93px 24px 0;
-        overflow-x: scroll;
+        flex-grow: 1;
     }
 
     .main__create-column {
         display: none;
+    }
+
+    .columns-wrapper {
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+    }
+
+    .columns-wrapper::-webkit-scrollbar-thumb {
+        width: 20px;
+        height: 20px;
+        color: orange;
+    }
+
+    .columns-wrapper::-webkit-scrollbar-track {
+        background-color: #ddd;
+        border: 1px solid blue;
     }
 }
 
