@@ -87,7 +87,7 @@
                         <img
                             class="author-arrow"
                             alt="arrow"
-                            src="/src/assets/images/card/arrow-down  choose author.svg"
+                            src="/src/assets/images/card/choose-author.svg"
                         />
                     </div>
                 </div>
