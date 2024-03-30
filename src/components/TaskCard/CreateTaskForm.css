@@ -170,15 +170,27 @@ textarea::placeholder {
         gap: 32px;
     }
 
-    img {
-        cursor: pointer;
-    }
-
     .description-input {
         border-radius: 0px 0px 4px 4px;
         height: 174px;
         width: 100%;
         box-sizing: border-box;
+    }
+
+    span:first-child,
+    span:nth-child(2),
+    span:last-child {
+        text-transform: uppercase;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    span:nth-child(2) {
+        font-style: italic;
+    }
+
+    span:last-child {
+        text-decoration: underline;
     }
 
     textarea::placeholder {

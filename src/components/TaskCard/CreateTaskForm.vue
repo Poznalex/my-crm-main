@@ -17,9 +17,9 @@
             <div class="description">
                 <label class="description-title" for="description">Description</label>
                 <div class="description-header">
-                    <img alt="Letter B" src="/src/assets/images/card/B.svg" />
-                    <img alt="Letter I" src="/src/assets/images/card/I.svg" />
-                    <img alt="Letter U" src="/src/assets/images/card/U.svg" />
+                    <span>b</span>
+                    <span>i</span>
+                    <span>u</span>
                 </div>
                 <textarea
                     placeholder="Placeholder"
