@@ -24,3 +24,11 @@ input::placeholder {
     color: var(--main-color-grey);
 }
 
+input:active,
+input:focus,
+.description-input:active,
+.description-input:focus {
+    outline: none;
+    border-color: var(--main-color-light-blue);
+}
+
