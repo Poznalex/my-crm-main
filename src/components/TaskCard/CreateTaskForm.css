@@ -1,4 +1,4 @@
-.body {
+.wrapper {
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -14,14 +14,6 @@
     flex-direction: column;
     gap: 12px;
     color: var(--main-color-grey);
-}
-
-input:active,
-input:focus,
-.description-input:active,
-.description-input:focus {
-    outline: none;
-    border-color: var(--main-color-light-blue);
 }
 
 .form-container {
@@ -134,7 +126,7 @@ textarea::placeholder {
 }
 
 @media screen and (min-width: 768px) {
-    .body {
+    .wrapper {
         display: block;
     }
 
