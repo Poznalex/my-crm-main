@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <div class="wrapper">
+    <div class="task-form__wrapper">
         <div class="title">Create task</div>
         <form class="input-forms">
             <div class="name">
