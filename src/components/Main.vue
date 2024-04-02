@@ -74,6 +74,7 @@ import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
         align-items: unset;
         padding: 93px 24px 0;
         flex-grow: 1;
+        overflow: hidden;
     }
 
     .main__create-column {
@@ -83,18 +84,31 @@ import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
     .columns-wrapper {
         display: flex;
         flex-direction: row;
-        overflow-x: scroll;
+        overflow: scroll;
+        border: 10px solid transparent;
+    }
+
+    .columns-wrapper::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        /* margin-right: -40px;
+        padding: 40px; */
     }
 
     .columns-wrapper::-webkit-scrollbar-thumb {
-        width: 20px;
-        height: 20px;
-        color: orange;
+        border-radius: 8px;
+        background: var(--main-color-light-blue);
+        margin-right: -40px;
     }
 
     .columns-wrapper::-webkit-scrollbar-track {
-        background-color: #ddd;
-        border: 1px solid blue;
+        border-radius: 8px;
+        background-color: var(--main-color-white);
+        padding: 93px;
+    }
+
+    .columns-wrapper {
+        scroll-margin-bottom: -40px;
     }
 }
 
