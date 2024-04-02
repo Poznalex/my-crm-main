@@ -11,7 +11,6 @@
                     type="text"
                     name="name"
                     placeholder="Placeholder"
-                    maxlength="500"
                 />
             </div>
             <div class="description">
@@ -25,7 +24,6 @@
                     placeholder="Placeholder"
                     class="description-input"
                     name="description"
-                    maxlength="500"
                 ></textarea>
             </div>
             <div class="form-container">
@@ -38,7 +36,6 @@
                             type="text"
                             name="until"
                             placeholder="12.05.2021"
-                            maxlength="500"
                         />
                         <img
                             class="until-calendar"
@@ -59,7 +56,6 @@
                             type="text"
                             name="estimation"
                             placeholder="1h 30m"
-                            maxlength="500"
                         />
                         <img
                             class="estimation-clock"
@@ -77,7 +73,6 @@
                             type="text"
                             name="author"
                             placeholder="Automatically"
-                            maxlength="500"
                         />
                         <img
                             class="author-userpic"
