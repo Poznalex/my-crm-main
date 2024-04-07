@@ -31,18 +31,7 @@
                     <!-- datapicker will be realised in a next task-->
                     <label class="until-title" for="until">Until</label>
                     <div class="until-container">
-                        <input
-                            class="until-input"
-                            type="text"
-                            name="until"
-                            placeholder="12.05.2021"
-                        />
-                        <img
-                            class="until-calendar"
-                            alt="calendar"
-                            src="/src/assets/images/card/calendar.svg
-                        "
-                        />
+                        <input class="until-input" name="until" type="date" />
                     </div>
                 </div>
                 <div class="estimation">
