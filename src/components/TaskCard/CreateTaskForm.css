@@ -60,10 +60,15 @@ textarea::placeholder {
     width: 100%;
 }
 
-.until-calendar {
-    position: absolute;
-    top: 6px;
-    right: 6px;
+.until-input {
+    padding: 3.5px 12px;
+    color: #999;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+    display: block;
+    background: url('/src/assets/images/card/calendar.svg') no-repeat;
+    margin-right: -6px;
     cursor: pointer;
 }
 
@@ -209,7 +214,7 @@ textarea::placeholder {
 
     .estimation-clock {
         position: absolute;
-        top: 6px;
+        top: 5px;
         cursor: pointer;
         width: 20px;
         height: 20px;
