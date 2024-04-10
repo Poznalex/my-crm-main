@@ -85,32 +85,27 @@ import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
         display: flex;
         flex-direction: row;
         overflow: scroll;
-        border: 10px solid transparent;
     }
 
     .columns-wrapper::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
     }
 
     .columns-wrapper::-webkit-scrollbar-thumb {
         border-radius: 8px;
         background: var(--main-color-light-blue);
-        margin-right: -40px;
     }
 
     .columns-wrapper::-webkit-scrollbar-track {
         border-radius: 8px;
         background-color: var(--main-color-white);
-        padding: 93px;
     }
 
-    .columns-wrapper::-webkit-scrollbar: {
-        background-color: invisible;
-    }
-
-    .columns-wrapper {
-        scroll-margin-bottom: -40px;
+    .columns-wrapper::-webkit-scrollbar-corner,
+    .columns-wrapper::-webkit-scrollbar-track:horizontal {
+        background-color: transparent;
+        margin-right: 20px;
     }
 }
 
