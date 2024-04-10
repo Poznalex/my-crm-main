@@ -91,8 +91,6 @@ import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
     .columns-wrapper::-webkit-scrollbar {
         width: 8px;
         height: 8px;
-        /* margin-right: -40px;
-        padding: 40px; */
     }
 
     .columns-wrapper::-webkit-scrollbar-thumb {
@@ -105,6 +103,10 @@ import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
         border-radius: 8px;
         background-color: var(--main-color-white);
         padding: 93px;
+    }
+
+    .columns-wrapper::-webkit-scrollbar: {
+        background-color: invisible;
     }
 
     .columns-wrapper {
