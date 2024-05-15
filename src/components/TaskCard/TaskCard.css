@@ -107,7 +107,9 @@
         margin-bottom: 16px;
     }
 
-    .card__until, .card__hours {
+    .card__until,
+    .card__hours,
+    .card__project-title {
         display: flex;
     }
 
@@ -142,9 +144,5 @@
         line-height: 18px;
         border-radius: 10px;
         margin-bottom: 32px;
-    }
-
-    .card__project-title {
-        display: flex;
     }
 }

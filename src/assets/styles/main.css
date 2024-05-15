@@ -23,3 +23,12 @@ input::placeholder {
     font-weight: 400;
     color: var(--main-color-grey);
 }
+
+input:active,
+input:focus,
+.description-input:active,
+.description-input:focus {
+    outline: none;
+    border-color: var(--main-color-light-blue);
+}
+
