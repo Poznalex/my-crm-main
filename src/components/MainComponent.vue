@@ -22,7 +22,7 @@ const arrColumns = [
 
 ]
 
-localStorage.setItem('myArray', JSON.stringify(myArray));
+localStorage.setItem('arrColumns', JSON.stringify(arrColumns));
 </script>
 
 <template>
@@ -35,25 +35,7 @@ localStorage.setItem('myArray', JSON.stringify(myArray));
         :amountTasks="item.tasksCount"
          @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
 />
-
-       <!-- <Column
-            title="to do"
-            amountTasks="18"
-            @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
-        />
-        <Column
-            title="in progress"
-            amountTasks="3"
-            @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
-        />
-        <Column
-            title="done"
-            amountTasks="456"
-            @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
-        />
-    -->
-
-        <div class="main__create-column" @click="$emit('open-modal', CreateColumnForm)">
+            <div class="main__create-column" @click="$emit('open-modal', CreateColumnForm)">
             <div class="create-column__text">Create column</div>
             <div class="create-column__icon">
                 <img alt="plus" src="/src/assets/images/main/create-plus.svg" />
