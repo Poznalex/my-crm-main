@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import Header from '/src/components/Header.vue';
-import Main from '/src/components/Main.vue';
+import Main from '/src/components/MainComponent.vue';
 import Modal from '/src/components/Modal/Modal.vue';
 
 const isShowModal = ref(false);
