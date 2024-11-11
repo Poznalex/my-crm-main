@@ -1,11 +1,42 @@
 <script setup>
 import Column from '/src/components/Column/Column.vue';
 import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
+const arrColumns = [
+    {
+         title: "to do",
+         tasksCount: "18",
+         order: "0",
+    },
+
+    {
+         title: "in progress",
+         tasksCount: "3",
+         order: "1",
+    },
+
+    {
+         title: "Done",
+         tasksCount: "456",
+         order: "2",
+    },
+
+]
+
+localStorage.setItem('myArray', JSON.stringify(myArray));
 </script>
 
 <template>
     <div class="main">
-        <Column
+
+        <Column 
+        v-for="(item, index) in arrColumns"
+        :key="index"
+        :title="item.title"
+        :amountTasks="item.tasksCount"
+         @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
+/>
+
+       <!-- <Column
             title="to do"
             amountTasks="18"
             @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
@@ -20,6 +51,7 @@ import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
             amountTasks="456"
             @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
         />
+    -->
 
         <div class="main__create-column" @click="$emit('open-modal', CreateColumnForm)">
             <div class="create-column__text">Create column</div>
