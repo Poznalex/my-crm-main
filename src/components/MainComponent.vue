@@ -23,13 +23,14 @@ const arrColumns = [
 ]
 
 localStorage.setItem('arrColumns', JSON.stringify(arrColumns));
+const savedArrayColumns = JSON.parse(localStorage.getItem('arrColumns'));
 </script>
 
 <template>
     <div class="main">
 
-        <Column 
-        v-for="(item, index) in arrColumns"
+        <Column k
+        v-for="(item, index) in savedArrayColumns"
         :key="index"
         :title="item.title"
         :amountTasks="item.tasksCount"

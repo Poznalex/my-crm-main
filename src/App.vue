@@ -30,5 +30,4 @@ function closeModal() {
         </Modal>
     </Teleport>
 </template>
-
 <style scoped></style>
