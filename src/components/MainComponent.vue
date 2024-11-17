@@ -29,7 +29,7 @@ const savedArrayColumns = JSON.parse(localStorage.getItem('arrColumns'));
 <template>
     <div class="main">
 
-        <Column k
+        <Column 
         v-for="(item, index) in savedArrayColumns"
         :key="index"
         :title="item.title"
