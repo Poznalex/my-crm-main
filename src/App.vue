@@ -16,6 +16,10 @@ function closeModal() {
     isShowModal.value = false;
     modalComponent.value = null;
 }
+
+function addColumnNew(e) {
+  alert(e);
+}// press buttton create column/add
 </script>
 
 <template>
@@ -26,6 +30,7 @@ function closeModal() {
             v-show="isShowModal"
             :defaultComponent="modalComponent"
             @close="closeModal"
+            @add-new-column="addColumnNew"
         >
         </Modal>
     </Teleport>

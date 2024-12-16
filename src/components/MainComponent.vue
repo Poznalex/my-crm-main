@@ -1,6 +1,7 @@
 <script setup>
 import Column from '/src/components/Column/Column.vue';
 import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
+
 const arrColumns = [
     {
          title: "to do",
