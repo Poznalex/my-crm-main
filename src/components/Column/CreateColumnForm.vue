@@ -6,12 +6,10 @@ const emit = defineEmits(['close','add-new-column']);
 
 function handleClick() {
   emit('add-new-column', userInput.value);
-  emit('close'); // Первое событие
- // Второе событие
+  emit('close');
 }
   
   </script>
-
 <template>
     <div class="create-column">
         <div class="create-column__title">Create column</div>

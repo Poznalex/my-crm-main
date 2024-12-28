@@ -1,4 +1,4 @@
-// eslint-disable-next-line vue/multi-word-component-names
+
 <script setup>
 
 import { ref } from 'vue';

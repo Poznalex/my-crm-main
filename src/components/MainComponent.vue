@@ -2,29 +2,29 @@
 import Column from '/src/components/Column/Column.vue';
 import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
 
+const props = defineProps({
+    localStorageColumns: {
+        type: Array,
+        default: [],
+    },
+});
+
 const arrColumns = [
     {
          title: "to do",
-         tasksCount: "18",
-         order: "0",
-    },
-
-    {
-         title: "in progress",
-         tasksCount: "3",
-         order: "1",
+         tasksCount: 0,
+         order: 0,
     },
 
     {
          title: "Done",
-         tasksCount: "456",
-         order: "2",
+         tasksCount: 0,
+         order: 1,
     },
 
 ]
 
-localStorage.setItem('arrColumns', JSON.stringify(arrColumns));
-const savedArrayColumns = JSON.parse(localStorage.getItem('arrColumns'));
+ const savedArrayColumns = localStorageColumns.length ? localStorageColumns :arrColumns;
 </script>
 
 <template>
@@ -36,7 +36,7 @@ const savedArrayColumns = JSON.parse(localStorage.getItem('arrColumns'));
         :title="item.title"
         :amountTasks="item.tasksCount"
          @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
-/>
+        />
             <div class="main__create-column" @click="$emit('open-modal', CreateColumnForm)">
             <div class="create-column__text">Create column</div>
             <div class="create-column__icon">
