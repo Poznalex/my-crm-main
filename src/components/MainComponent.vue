@@ -1,14 +1,8 @@
 <script setup>
 import Column from '/src/components/Column/Column.vue';
 import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
-
-const props = defineProps({
-    localStorageColumns: {
-        type: Array,
-        default: [],
-    },
-});
-
+import { ref } from 'vue';
+const  localStorageColumns = JSON.parse(localStorage.getItem('arrColumnsInLocalStorage')) || [];
 const arrColumns = [
     {
          title: "to do",
@@ -20,11 +14,11 @@ const arrColumns = [
          title: "Done",
          tasksCount: 0,
          order: 1,
-    },
+    }
 
-]
-
- const savedArrayColumns = localStorageColumns.length ? localStorageColumns :arrColumns;
+];
+   const  savedArrayColumns = localStorageColumns.length ? localStorageColumns : arrColumns;
+   localStorage.setItem('arrColumnsInLocalStorage', JSON.stringify(savedArrayColumns)); 
 </script>
 
 <template>
