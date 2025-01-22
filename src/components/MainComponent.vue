@@ -132,5 +132,4 @@ localStorage.setItem("arrColumnsInLocalStorage",JSON.stringify(savedArrayColumns
   .main {
     padding: 93px 150px 0;
   }
-}
-</style>
+  </style>
