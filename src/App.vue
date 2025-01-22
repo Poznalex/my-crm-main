@@ -17,24 +17,21 @@ function closeModal() {
     modalComponent.value = null;
 }
 
-   const savedArrayColumns = JSON.parse(localStorage.getItem('arrColumnsInLocalStorage'));
-   console.log(JSON.parse(localStorage.getItem('arrColumnsInLocalStorage')));
+const savedArrayColumns = JSON.parse(localStorage.getItem('arrColumnsInLocalStorage'));
+console.log(JSON.parse(localStorage.getItem('arrColumnsInLocalStorage')));
+
 
 function AddColumnToColumnArray(name) {
     const newColumn =
     {
-         title: name,
-         tasksCount: "0",
-         order: savedArrayColumns.length-1,
+        title: name,
+        tasksCount: "0",
+        order: savedArrayColumns.length - 1,
     }
-      console.log(newColumn);
-
-    savedArrayColumns.splice(savedArrayColumns.length-1, 0, newColumn); //вставляем новую колонку  в массив колонок
+    savedArrayColumns.splice(savedArrayColumns.length - 1, 0, newColumn); //вставляем новую колонку  в массив колонок
     window.location.reload()
     localStorage.setItem('arrColumnsInLocalStorage', JSON.stringify(savedArrayColumns)); //сохраняем обновленный массив колонок в локал сторэдж
 };
-localStorage.clear();
-
 </script>
 
 <template>
