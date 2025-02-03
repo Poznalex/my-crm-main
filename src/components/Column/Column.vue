@@ -1,4 +1,6 @@
+
 <script setup>
+
 import { ref } from 'vue';
 import TaskCard from '/src/components/TaskCard/TaskCard.vue';
 
@@ -19,6 +21,7 @@ const showTasks = () => {
                 src="/src/assets/images/main/column-arrow.svg"
             />
         </div>
+
         <div class="column__tasks">
             <TaskCard
                 projectName="X"
