@@ -1,5 +1,0 @@
-@import './color.css';
-
-body {
-  background: var(--main-color-transp-blue);
-}
