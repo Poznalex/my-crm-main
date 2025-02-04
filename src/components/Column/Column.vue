@@ -20,18 +20,9 @@ const showTasks = () => {
             />
         </div>
         <div class="column__tasks">
-            <TaskCard
-                projectName="X"
-                @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
-            />
-            <TaskCard
-                projectName="X"
-                @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
-            />
-            <TaskCard
-                projectName="X"
-                @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
-            />
+            <TaskCard projectName="X" />
+            <TaskCard projectName="X" />
+            <TaskCard projectName="X" />
         </div>
     </div>
 </template>
