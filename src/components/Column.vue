@@ -1,18 +1,44 @@
-<script setup>
-import { ref } from 'vue';
-import TaskCard from '/src/components/TaskCard/TaskCard.vue';
+<script>
+import TaskCard from "/src/components/TaskCard/TaskCard.vue";
 
-const props = defineProps(['title', 'amountTasks']);
-let isOpened = ref(false);
-const showTasks = () => {
-    if (window.innerWidth < 768) isOpened.value = !isOpened.value;
+export default {
+    components: {
+        TaskCard,
+    },
+
+    props: {
+        title: {
+            type: String,
+            default: "",
+        },
+
+        amountTasks: {
+            type: Number,
+            default: "",
+        },
+    },
+
+    data() {
+        return {
+            isOpened: false,
+        };
+    },
+
+    methods: {
+        showTasks() {
+            const isMobile = window.innerWidth < 768;
+            if (isMobile) this.isOpened = !this.isOpened;
+        },
+    },
 };
 </script>
 
 <template>
     <div class="column" :class="{ 'column--open': isOpened }">
         <div class="column__header" @click="showTasks">
-            <div class="column__header-title">{{ title }} - {{ amountTasks }}</div>
+            <div class="column__header-title">
+                {{ title }} - {{ amountTasks }}
+            </div>
             <img
                 class="column__arrow"
                 alt="arrow"

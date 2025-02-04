@@ -1,6 +1,4 @@
-<script setup>
-import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
-</script>
+<script setup></script>
 
 <template>
     <div class="header">
@@ -11,13 +9,7 @@ import CreateColumnForm from '/src/components/Column/CreateColumnForm.vue';
                 src="/src/assets/images/header/logo-header.svg"
             />
         </div>
-        <button
-            type="button"
-            class="header__button btn-column"
-            @click="$emit('open-modal', CreateColumnForm)"
-        >
-            Create column
-        </button>
+        <button class="header__button btn-column">Create column</button>
         <button class="header__button btn-task">Create task</button>
         <div class="header__plus">
             <img alt="logo" src="/src/assets/images/header/icon-plus.svg" />
