@@ -3,10 +3,7 @@
 
 body {
     background: var(--main-color-transp-blue);
-    background-size: 100% 100%;
     font-family: 'Montserrat', sans-serif;
-    max-height: 100vw;
-    overflow-x: hidden;
 }
 
 button {
@@ -35,8 +32,3 @@ input:focus,
     border-color: var(--main-color-light-blue);
 }
 
-#app {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
