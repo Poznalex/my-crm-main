@@ -9,9 +9,9 @@ const props = defineProps({
 
 <template>
     <Transition name="modal">
-        <div class="modal-mask" v-if="defaultComponent">
-            <div  class="modal-container">
-                <component :is="defaultComponent" @close="$emit('close')"  @add-new-column="(e) => $emit('add-new-column', e)" />
+        <div class="modal-mask">
+            <div v-if="defaultComponent" class="modal-container">
+                <component :is="defaultComponent" @close="$emit('close')" />
             </div>
         </div>
     </Transition>

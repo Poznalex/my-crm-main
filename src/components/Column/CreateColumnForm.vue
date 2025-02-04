@@ -1,23 +1,13 @@
-<script setup>
-import { defineEmits, ref } from 'vue';
-const emit = defineEmits(['close','add-new-column']);
- const userInput = ref(''); // Создаём реактивное значение
+<script setup></script>
 
-
-function handleClick() {
-  emit('add-new-column', userInput.value);
-  emit('close');
-}
-  
-  </script>
 <template>
     <div class="create-column">
         <div class="create-column__title">Create column</div>
         <form class="create-column__form">
             <label class="create-column__form-label" for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="NEW" maxlength="75" v-model="userInput" />
+            <input type="text" id="name" name="name" placeholder="NEW" maxlength="75" />
         </form>
-        <button type="button" class="create-column__button-add"  @click="handleClick">Add</button>
+        <button type="button" class="create-column__button-add">Add</button>
         <button
             type="button"
             class="create-column__button-cancel"
