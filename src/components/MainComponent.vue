@@ -1,5 +1,5 @@
 <script setup>
-import Column from "/src/components/Column/Column.vue";
+import Column from "/src/components/Column/ColumnMain.vue";
 import CreateColumnForm from "/src/components/Column/CreateColumnForm.vue";
 import { ref } from "vue";
 const localStorageColumns =

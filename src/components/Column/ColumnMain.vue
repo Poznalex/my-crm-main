@@ -27,14 +27,14 @@ const showTasks = () => {
                 projectName="X"
                 @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
             />
-            <TaskCard
+            <!-- <TaskCard
                 projectName="X"
                 @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
             />
             <TaskCard
                 projectName="X"
                 @open-modal="(taskInformation) => $emit('open-modal', taskInformation)"
-            />
+            />              -->
         </div>
     </div>
 </template>
