@@ -1,4 +1,14 @@
-<script setup></script>
+<script setup>
+import { defineEmits, ref } from 'vue';
+const emit = defineEmits(['close','add-new-task']);
+
+const userTaskName = ref('')
+function handleClickTaskForm() {
+  emit('add-new-task', userTaskName.value);
+  emit('close');
+}
+
+</script>
 
 <template>
     <div class="task-form__wrapper">
@@ -11,6 +21,8 @@
                     type="text"
                     name="name"
                     placeholder="Placeholder"
+                    maxlength="75"
+                    v-model="userTaskName"
                 />
             </div>
             <div class="description">
@@ -78,7 +90,7 @@
             </div>
         </form>
         <div class="btn-container">
-            <button type="submit" class="btn-create">Create task</button>
+            <button type="submit" class="btn-create" @click="handleClickTaskForm">Create task</button>
             <button type="button" class="btn-cancel" @click="$emit('close')">
                 Cancel
             </button>
